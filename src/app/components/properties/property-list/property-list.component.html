@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td class="table-primary text-center">Name</td>
+      <td class="table-primary text-center">Price</td>
+      <td class="table-primary text-center">Description</td>
+      <td class="table-primary text-center"></td>
+    </tr>
+  </thead>
+  <tr *ngFor="let prop of service.list">
+    <td (click)="populateForm(prop)" class="text-center">{{ prop.name }}</td>
+    <td (click)="populateForm(prop)" class="text-center">{{ prop.price }}</td>
+    <td (click)="populateForm(prop)" class="text-center">{{ prop.description }}</td>
+    <td  class="text-center"><button (click)="onDelete(prop.productId)" class="btn btn-sm btn-outline-danger">X</button></td>
+  </tr>
+</table>
