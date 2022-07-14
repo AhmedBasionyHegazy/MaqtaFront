@@ -38,7 +38,7 @@ export class PropertyComponent implements OnInit {
     this.service.postProperty(form.value).subscribe(res=>{
       this.toast.success({detail:"SUCCESS",summary:'Your Success Message',duration:5000});
       this.resetForm();
-      this.service.refreshList();
+      this.service.refreshList(); 
       form.resetForm();
     });
   }
